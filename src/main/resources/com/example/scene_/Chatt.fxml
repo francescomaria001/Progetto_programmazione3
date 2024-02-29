@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="407.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scene_.ChatController">
+   <center>
+      <VBox prefHeight="515.0" prefWidth="407.0" style="-fx-background-color: #d5f5e3;">
+         <children>
+            <AnchorPane prefHeight="79.0" prefWidth="407.0">
+               <children>
+                  <Button fx:id="followButton" layoutX="305.0" layoutY="25.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: transparent; -fx-border-color: #2E86C1; -fx-border-width: 0px 0px 2px 0px;" text="Follow" textFill="#2e86c1" textOverrun="CENTER_WORD_ELLIPSIS" onAction="#handleFollowButton" />
+                  <ImageView fitHeight="34.0" fitWidth="55.0" layoutX="40.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <!--  <Image url="@../../../../../../../Image/White_user-removebg-preview.png" />-->
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="34.0" layoutX="4.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <!--    <Image url="@../../../../../../../Image/Return_back-removebg-preview.png" />-->
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <TextArea fx:id="ChatBox" editable="false" prefHeight="402.0" prefWidth="407.0" style="-fx-background-color: #d5f5e3;" wrapText="true" />
+            <AnchorPane fx:id="MessageInputBox" prefHeight="82.0" prefWidth="407.0">
+               <TextField fx:id="MessageInputTextField" layoutX="14.0" layoutY="14.0" prefHeight="35.0"
+                          prefWidth="226.0" promptText="Scrivi un messaggio......."
+                          style="-fx-background-color: transparent;">
+               </TextField>
+               <Button fx:id="SendButton" layoutX="277.0" layoutY="19.0" mnemonicParsing="false"
+                       onAction="#handleSendButton" prefHeight="26.0" prefWidth="62.0"
+                       style="-fx-background-color: transparent; -fx-border-color: #00FF00; -fx-border-width: 0px 0px 2px 0px;"
+                       text="Send" textFill="LIME" />
+            </AnchorPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
