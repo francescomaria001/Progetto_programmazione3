@@ -20,16 +20,6 @@ public class ChatBoxObserver implements Observer {
     }
 
     /**
-     * Metodo di aggiornamento per l'osservatore.
-     * Non utilizzato in questa implementazione.
-     * @param data I dati dell'aggiornamento
-     */
-    @Override
-    public void update(Object data) {
-        // Non utilizzato in questa implementazione
-    }
-
-    /**
      * Notifica l'osservatore con un nuovo messaggio.
      * Aggiorna la chat box con il messaggio ricevuto.
      * @param message Il messaggio da aggiungere alla chat box
@@ -38,16 +28,11 @@ public class ChatBoxObserver implements Observer {
     public void notify(String message) {
         // Aggiorna la chat box con il nuovo messaggio
         chatBox.appendText(message + "\n");
+        System.out.println("\n");
+        System.out.println("chatBox aggiornata");
     }
 
-    /**
-     * Metodo di aggiornamento per l'osservatore.
-     * Non utilizzato in questa implementazione.
-     * @param message Il messaggio di aggiornamento
-     */
-    @Override
-    public void update(String message) {
-        // Non utilizzato in questa implementazione
-    }
+
+
 }
 

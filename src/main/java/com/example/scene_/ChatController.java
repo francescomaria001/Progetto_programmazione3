@@ -78,6 +78,7 @@ public class ChatController {
         Message message = messageFactory.createMessage(loggedInUser, timestamp, messageText);
         System.out.println("Invio del messaggio: " + message.getContent());
         MessageInputTextField.clear();
+        notifyObserver(messageText);
     System.out.print(timestamp);
         try (Connection connection = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASSWORD)) {
             String query = "INSERT INTO messages (idmessages, content, senderName, time) VALUES (?, ?, ?, ?)";
@@ -93,7 +94,7 @@ public class ChatController {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        notifyObserver(loggedInUser + ": " + messageText);
+
     }
 
     /**
